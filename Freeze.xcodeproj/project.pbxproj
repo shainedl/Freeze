@@ -15,6 +15,7 @@
 		B65F7DA522161F1800B25F5E /* FreezeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F7DA422161F1800B25F5E /* FreezeTests.swift */; };
 		B65F7DB022161F1800B25F5E /* FreezeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F7DAF22161F1800B25F5E /* FreezeUITests.swift */; };
 		B65F7DBF22161F4300B25F5E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65F7DBE22161F4300B25F5E /* HealthKit.framework */; };
+		B65F7DC22216316900B25F5E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F7DC12216316900B25F5E /* HealthKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		B65F7DB122161F1800B25F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65F7DBE22161F4300B25F5E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B65F7DC022161F4300B25F5E /* Freeze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Freeze.entitlements; sourceTree = "<group>"; };
+		B65F7DC12216316900B25F5E /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				B65F7D9622161F1700B25F5E /* Assets.xcassets */,
 				B65F7D9822161F1800B25F5E /* LaunchScreen.storyboard */,
 				B65F7D9B22161F1800B25F5E /* Info.plist */,
+				B65F7DC12216316900B25F5E /* HealthKitManager.swift */,
 			);
 			path = Freeze;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65F7D9222161F1600B25F5E /* ViewController.swift in Sources */,
+				B65F7DC22216316900B25F5E /* HealthKitManager.swift in Sources */,
 				B65F7D9022161F1600B25F5E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
