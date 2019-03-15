@@ -21,9 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSHealthShareUsageDescription</key>
-	<string>Can Freeze access your health data?</string>
+	<string>Can Freeze Access your data?</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>Can Freeze access your health data?</string>
+	<string>Can Freeze access your data?</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

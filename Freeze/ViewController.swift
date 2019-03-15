@@ -1,23 +1,24 @@
 //
 //  ViewController.swift
-//  Freeze
+//  freeze
 //
-//  Created by Shaine Leibowitz on 2/14/19.
-//  Copyright © 2019 Shaine Leibowitz. All rights reserved.
+//  Created by Anmol Seth on 3/12/19.
+//  Copyright © 2019 freeze. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    @IBAction func authorizeTapped(sender: AnyObject) {
-        HealthKitManager.authorizeHealthKit()
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
