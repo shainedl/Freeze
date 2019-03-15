@@ -13,6 +13,7 @@ typealias HKQueryUpdateHandler = ((HKAnchoredObjectQuery, [HKSample]?, [HKDelete
 protocol HeartRateManagerDelegate: class {
     
     func heartRate(didChangeTo newHeartRate: HeartRate)
+    func alertSend(didChangeTo newAlertSend: Bool)
     
 }
 
@@ -96,6 +97,13 @@ class HeartRateManager {
         // Delegate new heart rate.
         let newHeartRate = HeartRate(timestamp: timestamp, bpm: count)
         delegate?.heartRate(didChangeTo: newHeartRate)
+        
+        let averageRestingHeartRate = 75
+        
+        if Int(newHeartRate.bpm) < averageRestingHeartRate {
+            delegate?.alertSend(didChangeTo: true)
+        }
+        
     }
     
     

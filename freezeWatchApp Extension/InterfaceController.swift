@@ -48,6 +48,10 @@ class InterfaceController: WKInterfaceController {
 // MARK: - Workout Manager Delegate
 
 extension InterfaceController: WorkoutManagerDelegate {
+    func workoutManager(_ manager: WorkoutManager, didChangeAlertSendTo newAlertSend: Bool) {
+        heartRateLabel.setText("SEND ALERT")
+    }
+    
     
     func workoutManager(_ manager: WorkoutManager, didChangeStateTo newState: WorkoutState) {
         // Update title of control button.

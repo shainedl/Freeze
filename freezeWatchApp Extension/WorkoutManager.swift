@@ -30,6 +30,7 @@ protocol WorkoutManagerDelegate: class {
     
     func workoutManager(_ manager: WorkoutManager, didChangeStateTo newState: WorkoutState)
     func workoutManager(_ manager: WorkoutManager, didChangeHeartRateTo newHeartRate: HeartRate)
+    func workoutManager(_ manager: WorkoutManager, didChangeAlertSendTo newAlertSend: Bool)
     
 }
 
@@ -136,6 +137,9 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
 // MARK: - Heart Rate Delegate
 
 extension WorkoutManager: HeartRateManagerDelegate {
+    func alertSend(didChangeTo newAlertSend: Bool) {
+         delegate?.workoutManager(self, didChangeAlertSendTo: newAlertSend)
+    }
     
     func heartRate(didChangeTo newHeartRate: HeartRate) {
         delegate?.workoutManager(self, didChangeHeartRateTo: newHeartRate)
