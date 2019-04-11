@@ -14,6 +14,7 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var heartRateLabel: WKInterfaceLabel!
     @IBOutlet var controlButton: WKInterfaceButton!
+    @IBOutlet weak var alertNotification: WKInterfaceLabel!
     
     // MARK: - Properties
     
@@ -49,7 +50,12 @@ class InterfaceController: WKInterfaceController {
 
 extension InterfaceController: WorkoutManagerDelegate {
     func workoutManager(_ manager: WorkoutManager, didChangeAlertSendTo newAlertSend: Bool) {
-        heartRateLabel.setText("SEND ALERT")
+        if(newAlertSend){
+        alertNotification.setText("Alert Sent")
+        }
+        else{
+            alertNotification.setText("Alert Sent") 
+        }
     }
     
     

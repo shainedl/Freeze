@@ -98,7 +98,7 @@ class HeartRateManager {
         let newHeartRate = HeartRate(timestamp: timestamp, bpm: count)
         delegate?.heartRate(didChangeTo: newHeartRate)
         
-        let averageRestingHeartRate = 75
+        let averageRestingHeartRate = 60
         
         if Int(newHeartRate.bpm) < averageRestingHeartRate {
             delegate?.alertSend(didChangeTo: true)
