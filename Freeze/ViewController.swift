@@ -8,7 +8,15 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
+    
+    @IBOutlet var phoneNumberField: UITextField!
+    @IBOutlet var messageField: UITextField!
+    
+    @IBAction func sendData(sender: AnyObject) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
