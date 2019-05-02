@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         let parameters: Parameters = [
             "To": phoneNumberField.text ?? "",
             //"Body": messageField.text ?? ""
-            "Body": "Shaine Leibowitz is in danger!"
+            "Body": "Shaine Leibowitz is in danger! You can give her a call and find her location. https://goo.gl/maps/9e8ZmsDLW9hUjw619"
         ]
         Alamofire.request("http://localhost:5000/sms", method: .post, parameters: parameters, headers: headers).response { response in
             print(response)
