@@ -33,8 +33,8 @@ Besides immobility, an important feature of freezing is the parasympathetically 
 
 #### Prerequisites
 - Initial setup
-- iphone/iphone simulator
-- apple watch/watch simulator  
+- iPhone/iPhone simulator
+- Apple Watch/Watch simulator  
 
 
 ##### Running the Freeze Response Detection component
