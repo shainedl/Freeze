@@ -30,6 +30,7 @@ There are two main components of the Freeze application.
 #### Freeze Response Detection
 
 Besides immobility, an important feature of freezing is the parasympathetically induced heart rate deceleration, also called ‘bradycardia’. For our MVP, we focused tracking biometric data on heart monitoring. Using the HealthKit API, Freeze monitors heart rate on the Apple Watch. By deploying the Freeze application to the Apple Watch, Freeze determines if the user’s heart rate has dropped below 60 beats per minute, which is the definition of bradycardia. Though this detection occurs on the backend, for demonstration purposes, the current state of the application displays your heart rate as Freeze tracks it. When the user’s heart rate has dropped below 60 beats per minute, the display message switches from ‘Monitoring’ to ‘Freeze Response Detected’. This transition brings us to the next module of our product: sending act now alerts.
+
 #### Prerequisites
 - Initial setup
 - iphone/iphone simulator
@@ -44,16 +45,15 @@ Besides immobility, an important feature of freezing is the parasympathetically 
 - Grant access to see real time heart rate data being tracked on the applewatch app.  
 
 
-##### Act Now Alerts
-Within the iPhone application, our MVP simulates adding a contact number to their safety network that the user would like to contact when the application determines that the user has entered the freeze response and is in immediate danger of sexual assault. On the screen, you can enter a phone number to contact in the format that is given as an example. Therefore, you can enter <phone_number>, and it will send an ‘act now’ alert showing who is in danger and what their location is. The contact can click the link to open Google Maps to direct the contact to the user’s location. The text message comes in using the Twilio API.
+#### Act Now Alerts
 
-#### Prerequisites
-- Twilio account (free trial avaiable)
+##### Prerequisites
+- Twilio account (free trial available)
 - iPhone/iPhone simulator
 - Apple Watch/Watch simulator  
 
 
-#### Twilio API
+##### Twilio API
 While Twilio is a REST API and you could make an HTTP request to it directly, you would need to store your Twilio credentials inside your app which poses a serious security issue. An attacker could decompile the application, extract your credentials and use your Twilio account for anything they liked. Put in your own Twilio credentials including ACCOUNT_SID,  AUTH_TOKEN, and from_. The from_ field (within def send_sms) is the phone number Twilio assigns and the number the texts will come from. 
 
 ```
@@ -61,8 +61,8 @@ python app.py
 ```
 
 
-##### Running the Act Now Alerts component
-- We are going to use CocoaPods to install the dependency we’ll need for this project. Install CocoaPods if you don’t have it:
+##### Install Dependency
+We are going to use CocoaPods to install the dependency we’ll need for this project. Install CocoaPods if you don’t have it:
 ```
 sudo gem install cocoapods
 ```
@@ -80,5 +80,6 @@ open Freeze.xcworkspace
 ```
 
 Press “Command-B.” to verify the project builds with our dependency: Alamofire.
--
--
+
+##### Send Act Now Alerts
+Please run the iPhone application or iPhone simulator. Within the iPhone application, our MVP simulates adding a contact number to their safety network that the user would like to contact when the application determines that the user has entered the freeze response and is in immediate danger of sexual assault. On the screen, you can enter a phone number to contact in the format that is given as an example. Therefore, you can enter your <phone_number>, and pressing 'Send' will send an ‘act now’ alert showing who is in danger and what their location is. The contact can click the link to open Google Maps to direct the contact to the user’s location. The text message comes in using the Twilio API.
