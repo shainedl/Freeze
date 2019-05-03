@@ -45,7 +45,7 @@ Besides immobility, an important feature of freezing is the parasympathetically 
 
 
 ##### Act Now Alerts
-Within the iPhone application, our MVP simulates adding a contact number to their safety network that the user would like to contact when the application determines that the user has entered the freeze response and is in immediate danger of sexual assault. On the screen, you can enter a phone number to contact in the format that is given as an example. Therefore, you can enter ‘+17028620117’, and it will send an ‘act now’ alert showing who is in danger and what their location is. The contact can click the link to open Google Maps to direct the contact to the user’s location. The text message comes in using the Twilio API.
+Within the iPhone application, our MVP simulates adding a contact number to their safety network that the user would like to contact when the application determines that the user has entered the freeze response and is in immediate danger of sexual assault. On the screen, you can enter a phone number to contact in the format that is given as an example. Therefore, you can enter <phone_number>, and it will send an ‘act now’ alert showing who is in danger and what their location is. The contact can click the link to open Google Maps to direct the contact to the user’s location. The text message comes in using the Twilio API.
 
 #### Prerequisites
 -  Twilio account (it's free)
